@@ -1,7 +1,9 @@
+import { InputComponent } from './shared/input/input.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms'
 
 import { ROUTES } from './app.routes';
 
@@ -19,6 +21,7 @@ import { ShoppingCartComponent } from './restaurant-detail/shopping-cart/shoppin
 import { MenuItemComponent } from './restaurant-detail/menu-item/menu-item.component';
 import { ReviewsComponent } from './restaurant-detail/reviews/reviews.component';
 import { ShoppingCartService } from './restaurant-detail/shopping-cart/shopping-cart.service';
+import { OrderComponent } from './order/order.component';
 
 
 @NgModule({
@@ -34,10 +37,13 @@ import { ShoppingCartService } from './restaurant-detail/shopping-cart/shopping-
     ShoppingCartComponent,
     MenuItemComponent,
     ReviewsComponent,
+    OrderComponent,
+    InputComponent,
   ],
   imports: [
     BrowserModule,
     HttpModule,
+    FormsModule,
     RouterModule.forRoot(ROUTES)
   ],
   providers: [
