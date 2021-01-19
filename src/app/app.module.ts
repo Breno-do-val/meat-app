@@ -1,3 +1,4 @@
+import { OrderService } from './order/order.service';
 import { InputComponent } from './shared/input/input.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, LOCALE_ID } from '@angular/core';
@@ -23,6 +24,8 @@ import { ReviewsComponent } from './restaurant-detail/reviews/reviews.component'
 import { ShoppingCartService } from './restaurant-detail/shopping-cart/shopping-cart.service';
 import { OrderComponent } from './order/order.component';
 import { RadioComponent } from './shared/radio/radio.component';
+import { OrderItemsComponent } from './order/order-items/order-items.component';
+import { DeliveryCostsComponent } from './order/delivery-costs/delivery-costs.component';
 
 
 @NgModule({
@@ -41,6 +44,8 @@ import { RadioComponent } from './shared/radio/radio.component';
     OrderComponent,
     InputComponent,
     RadioComponent,
+    OrderItemsComponent,
+    DeliveryCostsComponent,
   ],
   imports: [
     BrowserModule,
@@ -51,6 +56,7 @@ import { RadioComponent } from './shared/radio/radio.component';
   providers: [
     RestaurantsService,
     ShoppingCartService,
+    OrderService,
     {
       provide: LOCALE_ID,
       useValue: 'pt-BR'
