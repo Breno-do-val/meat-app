@@ -15,32 +15,36 @@
         </div>    
         
         <div class="row">
-          <div class="col-xs-12">
+          <div class="col-xs-12 col-sm-9">
             <p class="lead">Seus dados:</p>
           </div>
+          <div class="col-xs-12 col-sm-9">
+            <span class="help-block pull-right has-error-block" *ngIf="orderForm.hasError('emailsDoesnotMatch')"><i class="fa fa-remove"></i>E-mails não conferem!</span>
+          </div>
+
+          <div class="col-sm-12 col-lg-5">
+            <mt-input-container 
+              errorMessage="Campo obrigatório e com 5 caracteres"
+              label="Nome">
+              <input class="form-control" placeholder="Nome" formControlName="name" autocomplete="off">
+            </mt-input-container>
+          </div>
+          <div class="col-sm-12 col-lg-3">
+            <mt-input-container 
+              errorMessage="E-mail inválido"
+              label="E-mail">
+              <input class="form-control" placeholder="E-mail" formControlName="email" autocomplete="off">
+            </mt-input-container>
+          </div>
+          <div class="col-sm-12 col-lg-4">
+            <mt-input-container 
+              errorMessage="E-mail não confere"
+              label="Confirmação de e-mail">
+              <input class="form-control" placeholder="Confirmação de e-mail" formControlName="emailConfirmation" autocomplete="off">
+            </mt-input-container>
+          </div>
         </div>
-        <div class="col-sm-12 col-lg-4">
-          <mt-input-container 
-            errorMessage="Campo obrigatório e com 5 caracteres"
-            label="Nome">
-            <input class="form-control" placeholder="Nome" formControlName="name" autocomplete="off">
-          </mt-input-container>
-        </div>
-        <div class="col-sm-12 col-lg-4">
-          <mt-input-container 
-            errorMessage="E-mail inválido"
-            label="Endereço">
-            <input class="form-control" placeholder="E-mail" formControlName="email" autocomplete="off">
-          </mt-input-container>
-        </div>
-        <div class="col-sm-12 col-lg-4">
-          <mt-input-container 
-            errorMessage="Campo obrigatório e com 5 caracteres"
-            label="Confirmação de e-mail">
-            <input class="form-control" placeholder="Confirmação de e-mail" formControlName="emailConfirmation" autocomplete="off">
-          </mt-input-container>
-        </div>
-        
+
         <div class="row">
           <div class="col-xs-12">
             <p class="lead">Endereço de Entrega:</p>
@@ -63,7 +67,7 @@
           <div class="col-sm-4 col-xs-6">
             <mt-input-container 
               errorMessage=""
-              label="Endereço">
+              label="Complemento">
               <input class="form-control" placeholder="Complemento" formControlName="optionalAddress" autocomplete="off">
             </mt-input-container>
           </div>
