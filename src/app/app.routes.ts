@@ -1,3 +1,4 @@
+import { NotFoundComponent } from './not-found/not-found.component';
 import { OrderSummaryComponent } from './order-summary/order-summary.component';
 import { Routes } from "@angular/router";
 
@@ -38,5 +39,8 @@ export const ROUTES: Routes = [
     },
     {
         path: 'about', loadChildren: './about/about.module#AboutModule'
+    },   
+    {
+        path: '**', component: NotFoundComponent
     },   
 ]
