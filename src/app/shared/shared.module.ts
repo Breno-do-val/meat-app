@@ -1,3 +1,4 @@
+import { HttpRequestInterceptor } from './utils/interceptors/http-request-interceptor';
 import { NotificationService } from './messages/notification.service';
 import { NgModule, ModuleWithProviders } from "@angular/core";
 import { CommonModule } from '@angular/common';
@@ -10,6 +11,7 @@ import { ShoppingCartService } from '../restaurant-detail/shopping-cart/shopping
 import { RestaurantsService } from '../restaurants/restaurants.service';
 import { OrderService } from '../order/order.service';
 import { SnackbarComponent } from './messages/snackbar/snackbar.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
 @NgModule({
     declarations: [
@@ -41,7 +43,8 @@ export class SharedModule {
                 ShoppingCartService,
                 RestaurantsService,
                 OrderService,
-                NotificationService
+                NotificationService,
+                { provide: HTTP_INTERCEPTORS, useClass: HttpRequestInterceptor, multi: true }
             ]
         }
     }
