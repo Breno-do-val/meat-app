@@ -79,10 +79,6 @@ export class RestaurantsComponent implements OnInit {
         this.restaurantsService.restaurants().subscribe(
             (restaurant) => {
                 this.restaurants = restaurant;
-            },
-            (err) => {
-                console.log('Could not retrieve data from server');
-                this.responseEmpty = false;
             }
         );
     }
