@@ -83,27 +83,27 @@ RegExp used in Forms Validation
 ```
 
 ## Setup
-**_Frontend_**
-Cloning repository:
+**_Frontend_**\
+Cloning repository:\
 `git clone https://github.com/Breno-do-val/meat-app.git`
 
-Installing dependencies:
+Installing dependencies:\
 `npm install`
 
-In the project directory, you can run:
-`npm start || ng serve`
+In the project directory, you can run:\
+`npm start || ng serve`\
 Runs the app in the development mode.\
 Open [http://localhost:4200](http://localhost:4200) to view it in the browser.
 
-**_Backend_**
-Installing Json-server:
+**_Backend_**\
+Installing Json-server:\
 `npm install -g json-server`
 
-Running the server:
+Running the server:\
 `nodemon --watch backend backend/dist/server.js`
 
 **_Note_**
-It's demanded to allow the browser fully access the backend, 
+It's demanded to allow the browser fully access the backend,\
 by typing `https:localhost:3001` on the browser and allowing it in advanced config.
 
 ## Author
