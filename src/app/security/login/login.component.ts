@@ -37,12 +37,12 @@ export class LoginComponent implements OnInit {
         this.loginService
             .login(this.loginForm.value.email, this.loginForm.value.password)
             .subscribe((user: User) => {
-                this.notificationService.notify(`Bem vindo, ${user.name}`),
-                    (response) =>
-                        this.notificationService.notify(response.error.message),
-                    () => {
-                        this.router.navigate([atob(this.navigateTo)]);
-                    };
-            });
+                this.notificationService.notify(`Bem vindo, ${user.name}`)
+                this.router.navigate([atob(this.navigateTo)])
+                },
+                (response) => {
+                    this.notificationService.notify(response.error.message)
+                }
+            );
     }
 }
